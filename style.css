@@ -1,89 +1,79 @@
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background: #f5f7f6;
   color: #333;
   line-height: 1.7;
 }
 
-h1, h2 {
-  color: #1b5e20;
-}
-
-.section {
-  padding: 60px 15%;
-  background: white;
-}
-
-.section:nth-child(even) {
-  background: #eef5f0;
+/* TOP BAR */
+.top-bar {
+  background: #1b5e20;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 10px;
+  font-size: 1rem;
 }
 
 /* HERO */
 .hero {
-  height: 80vh;
-  background-image: url("https://images.unsplash.com/photo-1546443046-ed1ce6ffd1ab");
+  height: 55vh;
+  background-image: url("https://images.unsplash.com/photo-1598515214211-89d3c73ae83b");
   background-size: cover;
   background-position: center;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.hero-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px 40px;
+  border-radius: 10px;
   text-align: center;
 }
 
-.hero-overlay h1 {
-  font-size: 3rem;
+.hero-box h1 {
   color: #c8e6c9;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
 }
 
-.hero-overlay p {
-  font-size: 1.2rem;
-}
-
-/* INTRO */
-.intro p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 1.05rem;
-}
-
-/* GALLERY */
-.gallery {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.gallery img {
-  width: 30%;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* SERVICES */
-.services ul {
-  list-style: none;
-  padding: 0;
-}
-
-.services li {
-  padding: 10px 0;
+.hero-box p {
+  color: white;
   font-size: 1.1rem;
+}
+
+/* SECTIONS */
+.section {
+  padding: 50px 15%;
+  background: white;
+}
+
+.section.alt {
+  background: #eef5f0;
+}
+
+.section h2 {
+  color: #1b5e20;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section li {
+  padding: 8px 0;
+  font-size: 1.05rem;
 }
 
 /* CONTACT */
 .contact {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 /* FOOTER */
@@ -91,20 +81,21 @@ footer {
   background: #1b5e20;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media (max-width: 900px) {
   .section {
-    padding: 40px 8%;
+    padding: 35px 8%;
   }
 
-  .gallery {
+  .top-bar {
     flex-direction: column;
+    gap: 5px;
   }
 
-  .gallery img {
-    width: 100%;
+  .hero {
+    height: 45vh;
   }
 }
